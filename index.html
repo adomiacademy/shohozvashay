@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adomi Hasan | Packaging & Social Media Design Expert</title>
+    
+    <!-- Blogger Mobile Redirect Bypass Script -->
+    <script type="text/javascript">
+        (function() {
+            var url = window.location.toString();
+            // মোবাইল রিডাইরেকশন (?m=1) ডিটেক্ট করে ডেস্কটপ থিম (?m=0) ফোর্স করা
+            if (url.indexOf("?m=1") > 0) {
+                var cleanUrl = url.replace("?m=1", "?m=0");
+                window.location.replace(cleanUrl);
+            }
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { 
+            font-family: 'Hind Siliguri', 'Inter', sans-serif; 
+            background-color: #0b0f19; 
+            color: #f1f5f9; 
+            overflow-x: hidden;
+        }
+        .glass { 
+            background: rgba(15, 23, 42, 0.60); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover { 
+            transform: translateY(-8px); 
+            border-color: #3b82f6; 
+            box-shadow: 0 15px 35px -10px rgba(59, 130, 246, 0.25);
+        }
+        ::-webkit-scrollbar { 
+            width: 8px; 
+        }
+        ::-webkit-scrollbar-track { 
+            background: #0b0f19; 
+        }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(180deg, #3b82f6, #8b5cf6); 
+            border-radius: 9999px; 
+        }
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .gradient-text { 
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass py-4 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-2">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg3-AnzeON4haBchrtxQiTv2O4D9bUEcmGhGCtGoBaZyAqdTVYrGAIoqro66ctdVvMIUCzY7cIR49ywYHp8v_dfbgnXHhmzkJLd8GOevzVGuhe_tI_pV8tHJKepwXxc7aQqbXlVEX-QuG2alLZ5Pe1fCTZztqjaesNJRwyqgtvgDdmlrNeTZlxR27P1w/s320/logo%20u.png" alt="Adomi Logo" class="h-10 md:h-12 w-auto drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#home" data-i18n="navHome" class="hover:text-blue-400 transition-colors">হোম</a>
+                <a href="#about" data-i18n="navAbout" class="hover:text-blue-400 transition-colors">পরিচিতি</a>
+                <a href="#skills" data-i18n="navSkills" class="hover:text-blue-400 transition-colors">দক্ষতা</a>
+                <a href="#services" data-i18n="navServices" class="hover:text-blue-400 transition-colors">সার্ভিস</a>
+                <a href="#packages" data-i18n="navPackages" class="hover:text-blue-400 transition-colors">প্যাকেজ</a>
+                <a href="#portfolio" data-i18n="navPortfolio" class="hover:text-blue-400 transition-colors">পোর্টফোলিও</a>
+                <a href="#contact" data-i18n="navContact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-blue-500/20">যোগাযোগ</a>
+                
+                <!-- Premium Language Switcher -->
+                <div class="flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-1 ml-2">
+                    <button id="langBtnBN-desktop" onclick="changeLanguage('bn')" class="px-2.5 py-1 rounded-full text-xs transition font-semibold">বাংলা</button>
+                    <button id="langBtnEN-desktop" onclick="changeLanguage('en')" class="px-2.5 py-1 rounded-full text-xs transition font-semibold">EN</button>
+                </div>
+            </div>
+
+            <!-- Mobile Controller -->
+            <div class="flex items-center gap-3 md:hidden">
+                <div class="flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-1">
+                    <button id="langBtnBN-mobile" onclick="changeLanguage('bn')" class="px-2.5 py-1 rounded-full text-xs transition font-semibold">বাংলা</button>
+                    <button id="langBtnEN-mobile" onclick="changeLanguage('en')" class="px-2.5 py-1 rounded-full text-xs transition font-semibold">EN</button>
+                </div>
+                <button class="text-white focus:outline-none p-2" id="menuBtn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars text-2xl transition-transform" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden absolute w-full left-0 mt-4 glass border-t border-white/10 px-6 py-6 space-y-4 flex flex-col transition-all duration-300" id="mobileMenu">
+            <a href="#home" data-i18n="navHome" class="hover:text-blue-400 transition py-2 border-b border-white/5">হোম</a>
+            <a href="#about" data-i18n="navAbout" class="hover:text-blue-400 transition py-2 border-b border-white/5">পরিচিতি</a>
+            <a href="#skills" data-i18n="navSkills" class="hover:text-blue-400 transition py-2 border-b border-white/5">দক্ষতা</a>
+            <a href="#services" data-i18n="navServices" class="hover:text-blue-400 transition py-2 border-b border-white/5">সার্ভিস</a>
+            <a href="#packages" data-i18n="navPackages" class="hover:text-blue-400 transition py-2 border-b border-white/5">প্যাকেজ</a>
+            <a href="#portfolio" data-i18n="navPortfolio" class="hover:text-blue-400 transition py-2 border-b border-white/5">পোর্টফোলিও</a>
+            <a href="#contact" data-i18n="navContact" class="bg-blue-600 text-center hover:bg-blue-700 text-white py-3 rounded-xl transition">যোগাযোগ করুন</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 hover:scale-105" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIyABL1fkC7ViRAjbkDEpsOBhK04yFrMAdZT-lrjE4gLQvRg7rLnApYT1OjbPsEqT3EnHHr-RrwlOR5Et6lyyax5bPQurZV-EX-f-qeXToiELff6WNaTzmQmg98tS8FrybgcHYpWbTb9N8v96Gmtdh49DWuNXcpqxZEe_WiBha5sst356AEPN1bbEEag/s1600/banner.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0b0f19]"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div data-i18n="experienceTag" class="inline-block mb-4 px-4 py-1.5 glass rounded-full text-sm text-blue-300 font-semibold tracking-wide uppercase border border-blue-500/30 animate-pulse">
+                ৬+ বছরের অভিজ্ঞতা সম্পন্ন ডিজাইনার
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
+                <span data-i18n="heroGg">আমি</span> <span class="gradient-text font-black">Adomi Hasan</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-blue-100/90 mb-8 max-w-2xl mx-auto leading-relaxed" data-i18n="heroSub">
+                প্যাকেজিং এবং লেবেল ডিজাইন বিশেষজ্ঞ
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition-all duration-300 font-semibold shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2">
+                    <i class="fas fa-paper-plane text-sm"></i> <span data-i18n="btnContact">যোগাযোগ করুন</span>
+                </a>
+                <a href="#portfolio" class="w-full sm:w-auto glass hover:bg-white/10 text-white px-8 py-4 rounded-full transition-all duration-300 font-semibold border border-white/20 flex items-center justify-center gap-2">
+                    <i class="fas fa-briefcase text-sm"></i> <span data-i18n="btnPortfolio">পোর্টফোলিও দেখুন</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden bg-slate-950/20">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Frame with Portrait aspect ratio -->
+                <div class="relative group reveal">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-2xl blur opacity-40 group-hover:opacity-80 transition duration-1000"></div>
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-white/10 aspect-[3/4] md:aspect-[4/5] flex items-center justify-center">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf-F6bTatHUUMHp72sAvbvJeCjMmEGI5Hr_SR_C07jn-_VrPcu2iTE4s87Ge6cfSolL0o0r9C7lv20K9otk5EVHdYELXtlfLQPLotOLIMCt5utwnnjInMP7SmAyshVsj8odN0Jf2IRUalAoIGZP3ayh_g3eoGVMfz8IAmkmeFqs7id_qmRpBzNGDU1pg/s1600/1782132018208.jpg.jpeg" alt="Adomi Hasan Photo" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-all duration-700">
+                    </div>
+                </div>
+                <div class="space-y-6 reveal">
+                    <span data-i18n="aboutTag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">আমার পরিচিতি</span>
+                    <h2 data-i18n="aboutTitle" class="text-3xl md:text-5xl font-bold text-white">ব্র্যান্ডের গল্প ফুটিয়ে তোলার কারিগর</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                    <p class="text-gray-300 text-lg leading-relaxed" data-i18n="aboutDesc">
+                        আমি একজন পেশাদার গ্রাফিক ডিজাইনার, যার ৬ বছরের দীর্ঘ অভিজ্ঞতা রয়েছে। বিশেষ করে প্যাকেজিং ডিজাইন, লেবেল ডিজাইন, এবং সোশ্যাল মিডিয়া কন্টেন্ট ম্যানেজমেন্টে আমি এক্সপার্ট। সৃজনশীল কাজের পাশাপাশি আমি একজন ট্রেইনার হিসেবে কাজ করছি এবং নতুনদের গ্রাফিক ডিজাইনে দক্ষ করে গড়ে তুলছি।
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="glass p-4 rounded-xl text-center">
+                            <h3 data-i18n="statExp" class="text-3xl font-bold text-blue-500">৬+ বছর</h3>
+                            <p data-i18n="statExpSub" class="text-sm text-gray-400 mt-1">পেশাদার অভিজ্ঞতা</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl text-center">
+                            <h3 data-i18n="statProj" class="text-3xl font-bold text-purple-400">৫০০+</h3>
+                            <p data-i18n="statProjSub" class="text-sm text-gray-400 mt-1">সফল প্রজেক্ট</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Progress Section -->
+    <section id="skills" class="py-24 relative overflow-hidden bg-slate-900/40">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span data-i18n="skillsTag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">স্কিলস & এক্সপার্টাইজ</span>
+                <h2 data-i18n="skillsTitle" class="text-3xl md:text-5xl font-bold text-white mt-2 reveal">আমার কাজের দক্ষতা</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p data-i18n="skillsDesc" class="text-gray-400">উন্নত ডিজাইন সেন্স এবং কাস্টম স্কিলসেট এর সমন্বয়ে ব্র্যান্ডকে এগিয়ে নেওয়ার মূল হাতিয়ারসমূহ।</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Skill 1 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-box text-blue-400"></i> <span data-i18n="skill1">প্যাকেজিং ও লেবেল ডিজাইন</span></span>
+                        <span class="text-blue-400 font-mono">95%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-1000 ease-out" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fab fa-instagram text-purple-400"></i> <span data-i18n="skill2">সোশ্যাল মিডিয়া ডিজাইন</span></span>
+                        <span class="text-purple-400 font-mono">90%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-pen-nib text-teal-400"></i> <span data-i18n="skill3">অ্যাডোবি ইলাস্ট্রেটর</span></span>
+                        <span class="text-teal-400 font-mono">92%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full transition-all duration-1000 ease-out" style="width: 92%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-image text-blue-500"></i> <span data-i18n="skill4">অ্যাডোবি ফটোশপ</span></span>
+                        <span class="text-blue-500 font-mono">85%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full transition-all duration-1000 ease-out" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-cubes text-pink-400"></i> <span data-i18n="skill5">থ্রিডি মকআপ ডিজাইন</span></span>
+                        <span class="text-pink-400 font-mono">88%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full transition-all duration-1000 ease-out" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="glass p-6 rounded-2xl reveal space-y-3">
+                    <div class="flex justify-between items-center font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-chalkboard-teacher text-amber-400"></i> <span data-i18n="skill6">গ্রাফিক ডিজাইন ট্রেইনার</span></span>
+                        <span class="text-amber-400 font-mono">80%</span>
+                    </div>
+                    <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full transition-all duration-1000 ease-out" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <span data-i18n="servicesTag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">প্রফেশনাল সেবাসমূহ</span>
+            <h2 data-i18n="servicesTitle" class="text-3xl md:text-5xl font-bold mb-4 reveal">আমার সার্ভিসসমূহ</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-16 rounded-full"></div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col items-center text-center reveal">
+                    <div class="w-16 h-16 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 border border-blue-500/20">
+                        <i class="fas fa-box-open text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 data-i18n="serv1Title" class="text-xl font-bold mb-4 text-white">প্যাকেজিং ও লেবেল ডিজাইন</h3>
+                    <p data-i18n="serv1Desc" class="text-gray-400 leading-relaxed">আপনার পণ্যের ব্র্যান্ড ভ্যালু বৃদ্ধিতে নিখুঁত এবং প্রিন্ট-রেডি প্যাকেজিং ও লেবেল ডিজাইন।</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col items-center text-center reveal">
+                    <div class="w-16 h-16 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20">
+                        <i class="fas fa-share-alt text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 data-i18n="serv2Title" class="text-xl font-bold mb-4 text-white">সোশ্যাল মিডিয়া ডিজাইন</h3>
+                    <p data-i18n="serv2Desc" class="text-gray-400 leading-relaxed">সোশ্যাল মিডিয়ার জন্য আকর্ষণীয় পোস্ট এবং প্রফেশনাল ডিজাইন যা আপনার অডিয়েন্সকে এনগেজ করবে।</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col items-center text-center reveal">
+                    <div class="w-16 h-16 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6 border border-pink-500/20">
+                        <i class="fas fa-youtube text-3xl text-pink-500"></i>
+                    </div>
+                    <h3 data-i18n="serv3Title" class="text-xl font-bold mb-4 text-white">ইউটিউব থাম্বনেল ডিজাইন</h3>
+                    <p data-i18n="serv3Desc" class="text-gray-400 leading-relaxed">ভিডিওর সিটিআর (CTR) বাড়ানোর জন্য হাই-কনভার্টিং এবং প্রফেশনাল থাম্বনেল ডিজাইন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-slate-950/40 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span data-i18n="pkgTag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">বাজেট ও অফার</span>
+                <h2 data-i18n="pkgTitle" class="text-3xl md:text-5xl font-bold text-white mt-2 reveal">আমার প্যাকেজসমূহ</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <!-- Packaging Details -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16 items-center reveal">
+                <div class="relative group overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYyBS1uHp2C-RMep1tgTHd7p-CkNjShPip0g5z8Urkjm7g1Pd6wo9yvgVEgcsyDIYKkqJl8-dI8tMIyaPioM-AFQtAyYtRz1Ci-4zIR8FKA-c-ZZFv2Ufmx2Qo0BtIRaKO9zc0fden_dtTMq3CDSRJrsj221BClhgj0gz_ZgoYxOHIxkStIi5HdkVJMA/s1600/do-all-types-of-product-packaging-label-and-sticker-design.jpg" alt="Packaging" class="rounded-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+                <div class="space-y-6">
+                    <span data-i18n="pkg1Tag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">প্রিমিয়াম প্যাকেজিং</span>
+                    <h3 data-i18n="pkg1Heading" class="text-2xl md:text-4xl font-bold leading-tight gradient-text">প্যাকেজিং, লেবেল, পাউচ, বোতল এবং বক্স ডিজাইন</h3>
+                    <p data-i18n="pkg1Desc" class="text-gray-300 leading-relaxed">এমন একজন ডিজাইনার খুঁজছেন যিনি ইন্ডাস্ট্রিয়াল প্রিন্টের নির্ভুলতার সাথে প্রোডাক্ট প্যাকেজিং ও লেবেল ডিজাইন বোঝেন? আমি আপনার পণ্য, ব্র্যান্ড এবং প্রিন্টিংয়ের প্রয়োজন অনুযায়ী পেশাদার প্যাকেজিং ডিজাইন সরবরাহ করি।</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-400 font-medium">
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-500"></i> <span data-i18n="pkg1Li1">প্যাকেজিং ও লেবেল ডিজাইন</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-500"></i> <span data-i18n="pkg1Li2">বোতল ও জারের লেবেল</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-500"></i> <span data-i18n="pkg1Li3">পাউচ ও বক্স ডিজাইন</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-500"></i> <span data-i18n="pkg1Li4">প্রিন্ট-রেডি ফাইল ও ৩ডি মকআপ</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Price Cards - Packaging -->
+            <div class="grid md:grid-cols-3 gap-8 mb-24 reveal">
+                <!-- Basic Card -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col relative overflow-hidden">
+                    <h4 data-i18n="pkgBasicTitle" class="text-xl font-bold mb-2">Basic (বেসিক)</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$60</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-blue-400"></i> <span data-i18n="pkgBasicLi1">৩ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-blue-400"></i> <span data-i18n="pkgBasicLi2">২ বার রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-box text-blue-400"></i> <span data-i18n="pkgBasicLi3">১টি অনন্য ডিজাইন কনসেপ্ট</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-export text-blue-400"></i> <span data-i18n="pkgBasicLi4">থ্রিডি মকআপ ও সোর্স ফাইল</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl border border-blue-500 hover:bg-blue-600 font-semibold transition-all duration-300">অর্ডার করুন</a>
+                </div>
+                
+                <!-- Standard Card -->
+                <div class="glass p-8 rounded-2xl card-hover border-2 border-blue-500 flex flex-col relative">
+                    <div class="absolute -top-3 right-8 bg-blue-600 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-lg shadow-blue-500/20">POPULAR</div>
+                    <h4 data-i18n="pkgStandardTitle" class="text-xl font-bold mb-2">Standard (স্ট্যান্ডার্ড)</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$120</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-blue-400"></i> <span data-i18n="pkgStdLi1">৪ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-blue-400"></i> <span data-i18n="pkgStdLi2">আনলিমিটেড রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-box text-blue-400"></i> <span data-i18n="pkgStdLi3">১টি হাই-এন্ড আইটেম</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-export text-blue-400"></i> <span data-i18n="pkgStdLi4">প্রিন্ট রেডি ও সোর্স ফাইল</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-cubes text-blue-400"></i> <span data-i18n="pkgStdLi5">প্রিমিয়াম থ্রিডি মকআপ</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-300 shadow-md">অর্ডার করুন</a>
+                </div>
+                
+                <!-- Premium Card -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col relative overflow-hidden">
+                    <h4 data-i18n="pkgPremiumTitle" class="text-xl font-bold mb-2">Premium (প্রিমিয়াম)</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$250</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-blue-400"></i> <span data-i18n="pkgPreLi1">৭ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-blue-400"></i> <span data-i18n="pkgPreLi2">আনলিমিটেড রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-box text-blue-400"></i> <span data-i18n="pkgPreLi3">৩টি কমপ্লিট আইটেম বা ভেরিয়েশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-export text-blue-400"></i> <span data-i18n="pkgPreLi4">অল সোর্স ফাইল (AI, EPS)</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-cubes text-blue-400"></i> <span data-i18n="pkgPreLi5">মাল্টিপল ৩ডি মকআপ</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl border border-blue-500 hover:bg-blue-600 font-semibold transition-all duration-300">অর্ডার করুন</a>
+                </div>
+            </div>
+
+            <!-- Social Media Layout -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16 items-center reveal">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <span data-i18n="pkg2Tag" class="text-purple-400 font-bold tracking-wider uppercase text-sm">অডিয়েন্স বুস্টার</span>
+                    <h3 data-i18n="pkg2Heading" class="text-2xl md:text-4xl font-bold leading-tight gradient-text">সোশ্যাল মিডিয়া পোস্ট ও ক্যারোসেল ডিজাইন</h3>
+                    <p data-i18n="pkg2Desc" class="text-gray-300 leading-relaxed">আপনার সোশ্যাল মিডিয়াকে একটি উচ্চ রূপান্তরকারী ব্র্যান্ড সম্পদে পরিণত করুন। আমি এমন আকর্ষণীয় ভিজ্যুয়াল ডিজাইন করি যা শুধু দেখতেই সুন্দর নয়, বরং এনগেজমেন্ট, ক্লিক এবং বিক্রি বাড়াতে সাহায্য করে।</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-400"></i> <span data-i18n="pkg2Li1">কাস্টম ইনস্টাগ্রাম ও ক্যারোসেল</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-400"></i> <span data-i18n="pkg2Li2">ফেসবুক ও ইনস্টা অ্যাড ডিজাইন</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-400"></i> <span data-i18n="pkg2Li3">ইন্সটাগ্রাম স্টোরি এবং রিল কভার</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-400"></i> <span data-i18n="pkg2Li4">ই-কমার্স অ্যাড ক্রিয়েটিভস</span></li>
+                    </ul>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-2xl order-1 lg:order-2">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCI32Mq2lkJKCJDQFivQnAsGP4vsD9ZjB8w3D8PMK5OBvMf29_nLdUFqvPJJawfv-B5P8N6MB9o5_xS9jIw-YjUachCzlQnzzl1l0gpxjagqwc9-hlHlRZLD_J660ZT7iyBwIKMbPm7pUJoIJa2VdehIINg-pxaef99hOI9lrHFbNgh0-vPFUXV5HMCw/s1600/develop-custom-ai-website-design-as-a-full-stack-web-developer-using-react.jpeg" alt="Social Media Design" class="rounded-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Price Cards - Social Media -->
+            <div class="grid md:grid-cols-3 gap-8 reveal">
+                <!-- Social Starter -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col relative overflow-hidden">
+                    <h4 data-i18n="pkg2BasicTitle" class="text-xl font-bold mb-2">সোশ্যাল স্পার্ক স্টার্টার</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$10</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-purple-400"></i> <span data-i18n="pkg2BasicLi1">৩ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-purple-400"></i> <span data-i18n="pkg2BasicLi2">অসীম রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-image text-purple-400"></i> <span data-i18n="pkg2BasicLi3">১টি কাস্টম ইমেজ বিজ্ঞাপন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-code text-purple-400"></i> <span data-i18n="pkg2BasicLi4">সোর্স ফাইল অন্তর্ভুক্ত</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl border border-purple-500 hover:bg-purple-600 font-semibold transition-all duration-300">অর্ডার করুন</a>
+                </div>
+
+                <!-- Social Boost -->
+                <div class="glass p-8 rounded-2xl card-hover border-2 border-purple-500 flex flex-col relative">
+                    <div class="absolute -top-3 right-8 bg-purple-600 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-lg shadow-purple-500/20">POPULAR</div>
+                    <h4 data-i18n="pkg2StdTitle" class="text-xl font-bold mb-2">সোশ্যাল বুস্ট প্রো</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$45</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-purple-400"></i> <span data-i18n="pkg2StdLi1">৭ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-purple-400"></i> <span data-i18n="pkg2StdLi2">অসীম রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-image text-purple-400"></i> <span data-i18n="pkg2StdLi3">৬টি কাস্টম পোস্ট বা অ্যাড</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-code text-purple-400"></i> <span data-i18n="pkg2StdLi4">সোর্স ফাইল অন্তর্ভুক্ত</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-palette text-purple-400"></i> <span data-i18n="pkg2StdLi5">ব্র্যান্ড-থিম ম্যাচ ডিজাইন</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all duration-300 shadow-md">অর্ডার করুন</a>
+                </div>
+
+                <!-- Social Domination -->
+                <div class="glass p-8 rounded-2xl card-hover flex flex-col relative overflow-hidden">
+                    <h4 data-i18n="pkg2PreTitle" class="text-xl font-bold mb-2">সোশ্যাল ডোমিনেশন প্যাক</h4>
+                    <p class="text-5xl font-extrabold mb-6 text-white font-mono">$80</p>
+                    <div class="border-t border-white/10 pt-6 mb-8 flex-grow">
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><i class="far fa-clock text-purple-400"></i> <span data-i18n="pkg2PreLi1">১৪ দিনের ডেলিভারি</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-redo text-purple-400"></i> <span data-i18n="pkg2PreLi2">অসীম রিভিশন</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-image text-purple-400"></i> <span data-i18n="pkg2PreLi3">১২টি কাস্টম পোস্ট বা অ্যাড</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-file-code text-purple-400"></i> <span data-i18n="pkg2PreLi4">অল সোর্স ফাইল (PSD/Ai)</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-vector-square text-purple-400"></i> <span data-i18n="pkg2PreLi5">হাই-কোয়ালিটি টেমপ্লেট</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-i18n="btnOrder" class="w-full text-center py-3 rounded-xl border border-purple-500 hover:bg-purple-600 font-semibold transition-all duration-300">অর্ডার করুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span data-i18n="portTag" class="text-blue-500 font-bold tracking-wider uppercase text-sm">পোর্টফোলিও</span>
+                <h2 data-i18n="portTitle" class="text-3xl md:text-5xl font-bold text-white mt-2 reveal">আমার অসাধারণ কাজসমূহ</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 mb-6 rounded-full"></div>
+            </div>
+
+            <!-- Category Filtering -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+                <button class="filter-btn active bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md" data-filter="all" data-i18n="filterAll">সব কাজ</button>
+                <button class="filter-btn glass hover:bg-blue-600 hover:text-white text-gray-300 px-6 py-2.5 rounded-full text-sm font-semibold transition" data-filter="packaging" data-i18n="filterPack">প্যাকেজিং</button>
+                <button class="filter-btn glass hover:bg-blue-600 hover:text-white text-gray-300 px-6 py-2.5 rounded-full text-sm font-semibold transition" data-filter="label" data-i18n="filterLabel">লেবেল ডিজাইন</button>
+                <button class="filter-btn glass hover:bg-blue-600 hover:text-white text-gray-300 px-6 py-2.5 rounded-full text-sm font-semibold transition" data-filter="branding" data-i18n="filterBrand">ব্র্যান্ডিং</button>
+            </div>
+            
+            <!-- Optimized grid for Portrait layouts (prevents cropping as in image_573728.png) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" id="projectGrid">
+                <!-- Dynamically Rendered JS Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Location Section -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-slate-950/20">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 data-i18n="contactTitle" class="text-3xl md:text-5xl font-bold mb-4 text-center reveal">যোগাযোগ করুন</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-16 rounded-full"></div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+                <!-- Interactive Form -->
+                <div class="glass p-8 rounded-2xl flex flex-col justify-between reveal">
+                    <div>
+                        <h3 data-i18n="contactFormTitle" class="text-2xl font-bold mb-4 text-white">একটি বার্তা পাঠান</h3>
+                        <p data-i18n="contactFormDesc" class="text-gray-400 mb-6 text-sm">আপনার যেকোনো প্রোজেক্ট, প্রোডাক্ট লঞ্চিং বা লেবেল ডিজাইনের প্রয়োজনে নিচে বিস্তারিত লিখে মেসেজ পাঠান। খুব দ্রুত রিপ্লাই দেওয়া হবে।</p>
+                    </div>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label data-i18n="labelName" class="block text-sm text-gray-400 mb-1" for="nameInput">আপনার নাম</label>
+                            <input type="text" id="nameInput" required placeholder="সম্পূর্ণ নাম" class="w-full p-4 rounded-xl bg-white/5 border border-white/10 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-white">
+                        </div>
+                        <div>
+                            <label data-i18n="labelEmail" class="block text-sm text-gray-400 mb-1" for="emailInput">আপনার ইমেইল</label>
+                            <input type="email" id="emailInput" required placeholder="ইমেল অ্যাড্রেস" class="w-full p-4 rounded-xl bg-white/5 border border-white/10 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-white">
+                        </div>
+                        <div>
+                            <label data-i18n="labelMsg" class="block text-sm text-gray-400 mb-1" for="messageInput">মেসেজ</label>
+                            <textarea id="messageInput" required placeholder="আপনার প্রোজেক্ট ও আইডিয়ার বর্ণনা..." class="w-full p-4 rounded-xl bg-white/5 border border-white/10 h-32 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-white resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold transition duration-300 shadow-md hover:shadow-blue-500/15 flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="btnSend">বার্তা পাঠান</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Google Maps Embed -->
+                <div class="glass p-8 rounded-2xl flex flex-col justify-between reveal">
+                    <div>
+                        <h3 data-i18n="contactLocTitle" class="text-2xl font-bold mb-4 text-white">কর্মক্ষেত্র ও অবস্থান</h3>
+                        <div class="space-y-4 text-gray-300 mb-6 text-sm">
+                            <p class="flex items-center gap-3">
+                                <i class="fas fa-map-marker-alt text-blue-500 text-lg w-5 text-center"></i>
+                                <span data-i18n="contactAddress">রংপুর, সাতমাথা, বাংলাদেশ</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fas fa-envelope text-blue-500 text-lg w-5 text-center"></i>
+                                shohozvashay@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full h-72 rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14442.238466632488!2d89.24357732297136!3d25.753889151529124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32de67a3b3a7b%3A0x6a0f0f0f0f0f0f0f!2sRangpur%20Satmatha!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Google Map location of Satmatha, Rangpur"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer Redesign -->
+    <footer class="relative bg-[#070a12] text-gray-300 border-t border-white/10 overflow-hidden pt-16 pb-8">
+        <!-- Backdrops visual depth -->
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Corporate Info column -->
+                <div class="space-y-5">
+                    <a href="#home" class="inline-block">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg3-AnzeON4haBchrtxQiTv2O4D9bUEcmGhGCtGoBaZyAqdTVYrGAIoqro66ctdVvMIUCzY7cIR49ywYHp8v_dfbgnXHhmzkJLd8GOevzVGuhe_tI_pV8tHJKepwXxc7aQqbXlVEX-QuG2alLZ5Pe1fCTZztqjaesNJRwyqgtvgDdmlrNeTZlxR27P1w/s320/logo%20u.png" alt="Adomi Logo" class="h-10 w-auto">
+                    </a>
+                    <p data-i18n="footerDesc" class="text-gray-400 text-sm leading-relaxed">
+                        ৬ বছরের দীর্ঘ অভিজ্ঞতা সম্পন্ন প্যাকেজিং, লেবেল এবং সোশ্যাল মিডিয়া ডিজাইন সリューション। আপনার বিশ্বস্ত ডিজাইন পার্টনার।
+                    </p>
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-xs space-y-2">
+                        <div data-i18n="footerLicense" class="text-blue-400 font-bold tracking-wide uppercase"><i class="fas fa-file-contract mr-1.5"></i> ব্যবসায়িক লাইসেন্স তথ্য</div>
+                        <p class="text-gray-300 font-semibold"><span data-i18n="footerTrade">ট্রেড লাইসেন্স :</span> <span class="font-mono text-gray-200">06-008-003242</span></p>
+                    </div>
+                </div>
+
+                <!-- Navigation column -->
+                <div class="space-y-4">
+                    <h4 data-i18n="footerQuickLinks" class="text-white font-bold text-lg border-b border-white/10 pb-2">গুরুত্বপূর্ণ লিংক</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> <span data-i18n="navHome">হোম</span></a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> <span data-i18n="navAbout">পরিচিতি</span></a></li>
+                        <li><a href="#skills" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> <span data-i18n="navSkills">দক্ষতা</span></a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> <span data-i18n="navServices">সার্ভিসসমূহ</span></a></li>
+                        <li><a href="#packages" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> <span data-i18n="navPackages">প্যাকেজসমূহ</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div class="space-y-4 lg:col-span-2">
+                    <h4 data-i18n="footerContactTitle" class="text-white font-bold text-lg border-b border-white/10 pb-2">যোগাযোগের তথ্যাদি</h4>
+                    <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-300">
+                        <!-- Email -->
+                        <div class="flex gap-3 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                                <i class="fas fa-envelope text-blue-400 text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Email</p>
+                                <a href="mailto:shohozvashay@gmail.com" class="hover:text-blue-400 transition break-all font-mono">shohozvashay@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="flex gap-3 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-red-400 text-base"></i>
+                            </div>
+                            <div>
+                                <p data-i18n="footerOffice" class="text-xs text-gray-500 font-semibold uppercase tracking-wider">অফিস ঠিকানা</p>
+                                <p data-i18n="footerOfficeVal" class="text-gray-200">সাতমাথা, রংপুর, বাংলাদেশ</p>
+                            </div>
+                        </div>
+
+                        <!-- Customer Services Phone -->
+                        <div class="flex gap-3 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+                                <i class="fas fa-phone-alt text-emerald-400 text-base"></i>
+                            </div>
+                            <div>
+                                <p data-i18n="footerPhoneCust" class="text-xs text-gray-500 font-semibold uppercase tracking-wider">কাস্টমার সার্ভিসেস ফোন</p>
+                                <a href="tel:+8801568087094" class="hover:text-emerald-400 transition font-mono">+880 156808-7094</a>
+                            </div>
+                        </div>
+
+                        <!-- Manager Phone -->
+                        <div class="flex gap-3 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0">
+                                <i class="fas fa-user-tie text-purple-400 text-base"></i>
+                            </div>
+                            <div>
+                                <p data-i18n="footerPhoneMgr" class="text-xs text-gray-500 font-semibold uppercase tracking-wider">ম্যানেজার এর ফোন</p>
+                                <a href="tel:+880799216505" class="hover:text-purple-400 transition font-mono">+880 79921-6505</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Social Icons -->
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p data-i18n="footerCopyright">© ২০২৬ Adomi Hasan. সর্বস্বত্ব সংরক্ষিত।</p>
+                <div class="flex gap-4 text-base">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Widget -->
+    <div id="whatsappWidget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 font-sans">
+        <!-- Notification Bubble with smooth fade and slide transition -->
+        <div id="whatsappBubble" class="glass p-4 rounded-2xl shadow-2xl max-w-[280px] sm:max-w-xs border border-emerald-500/30 text-slate-100 flex flex-col gap-2 transform translate-y-4 opacity-0 transition-all duration-500 pointer-events-none relative">
+            <button onclick="closeWhatsappBubble(event)" class="absolute top-2 right-2 text-slate-400 hover:text-white transition p-1" aria-label="Close notification">
+                <i class="fas fa-times text-xs"></i>
+            </button>
+            <div class="flex items-start gap-2.5 mt-1">
+                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 animate-pulse shrink-0"></div>
+                <div>
+                    <h5 class="font-bold text-xs text-emerald-400 tracking-wide uppercase">Adomi Hasan</h5>
+                    <p data-i18n="whatsappNotify" class="text-sm text-slate-200 font-medium leading-relaxed mt-0.5">
+                        আসসালামু আলাইকুম স্যার, কীভাবে সহযোগিতা করতে পারি?
+                    </p>
+                </div>
+            </div>
+            <a href="https://wa.me/8801568087094?text=Assalamu%20Alaikum%20Adomi%20Hasan" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl text-center shadow-lg shadow-emerald-500/20 transition-all duration-300 flex items-center justify-center gap-1.5 mt-1">
+                <i class="fab fa-whatsapp text-sm"></i> <span data-i18n="whatsappChatBtn">চ্যাট শুরু করুন</span>
+            </a>
+        </div>
+        
+        <!-- Glowing Pulse button -->
+        <a href="https://wa.me/8801568087094?text=Assalamu%20Alaikum%20Adomi%20Hasan" target="_blank" rel="noopener noreferrer" class="relative w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white rounded-full flex items-center justify-center shadow-xl shadow-emerald-500/30 hover:scale-110 transition-all duration-300 group" aria-label="Chat on WhatsApp">
+            <span class="absolute inset-0 rounded-full bg-emerald-500/40 animate-ping opacity-75"></span>
+            <i class="fab fa-whatsapp text-3xl z-10"></i>
+        </a>
+    </div>
+
+    <!-- Dictionary & Initial Setup Script -->
+    <script>
+        const translations = {
+            bn: {
+                experienceTag: "৬+ বছরের অভিজ্ঞতা সম্পন্ন ডিজাইনার",
+                heroGg: "আমি",
+                heroSub: "প্যাকেজিং এবং লেবেল ডিজাইন বিশেষজ্ঞ",
+                btnContact: "যোগাযোগ করুন",
+                btnPortfolio: "পোর্টফোলিও দেখুন",
+                navHome: "হোম",
+                navAbout: "পরিচিতি",
+                navSkills: "দক্ষতা",
+                navServices: "সার্ভিস",
+                navPackages: "প্যাকেজ",
+                navPortfolio: "পোর্টফোলিও",
+                navContact: "যোগাযোগ",
+                aboutTag: "আমার পরিচিতি",
+                aboutTitle: "ব্র্যান্ডের গল্প ফুটিয়ে তোলার কারিগর",
+                aboutDesc: "আমি একজন পেশাদার গ্রাফিক ডিজাইনার, যার ৬ বছরের দীর্ঘ অভিজ্ঞতা রয়েছে। বিশেষ করে প্যাকেজিং ডিজাইন, লেবেল ডিজাইন, এবং সোশ্যাল মিডিয়া কন্টেন্ট ম্যানেজমেন্টে আমি এক্সপার্ট। সৃজনশীল কাজের পাশাপাশি আমি একজন ট্রেইনার হিসেবে কাজ করছি এবং নতুনদের গ্রাফিক ডিজাইনে দক্ষ করে গড়ে তুলছি।",
+                statExp: "৬+ বছর",
+                statExpSub: "পেশাদার অভিজ্ঞতা",
+                statProj: "৫০০+",
+                statProjSub: "সফল প্রজেক্ট",
+                skillsTag: "স্কিলস & এক্সপার্টাইজ",
+                skillsTitle: "আমার কাজের দক্ষতা",
+                skillsDesc: "উন্নত ডিজাইন সেন্স এবং কাস্টম স্কিলসেট এর সমন্বয়ে ব্র্যান্ডকে এগিয়ে নেওয়ার মূল হাতিয়ারসমূহ।",
+                skill1: "প্যাকেজিং ও লেবেল ডিজাইন",
+                skill2: "সোশ্যাল মিডিয়া ডিজাইন",
+                skill3: "অ্যাডোবি ইলাস্ট্রেটর",
+                skill4: "অ্যাডোবি ফটোশপ",
+                skill5: "থ্রিডি মকআপ ডিজাইন",
+                skill6: "গ্রাফিক ডিজাইন ট্রেইনার",
+                servicesTag: "প্রফেশনাল সেবাসমূহ",
+                servicesTitle: "আমার সার্ভিসসমূহ",
+                serv1Title: "প্যাকেজিং ও লেবেল ডিজাইন",
+                serv1Desc: "আপনার পণ্যের ব্র্যান্ড ভ্যালু বৃদ্ধিতে নিখুঁত এবং প্রিন্ট-রেডি প্যাকেজিং ও লেবেল ডিজাইন।",
+                serv2Title: "সোশ্যাল মিডিয়া ডিজাইন",
+                serv2Desc: "সোশ্যাল মিডিয়ার জন্য আকর্ষণীয় পোস্ট এবং প্রফেশনাল ডিজাইন যা আপনার অডিয়েন্সকে এনগেজ করবে।",
+                serv3Title: "ইউটিউব থাম্বনেল ডিজাইন",
+                serv3Desc: "ভিডিওর সিটিআর (CTR) বাড়ানোর জন্য হাই-কনভার্টিং এবং প্রফেশনাল থাম্বনেল ডিজাইন।",
+                pkgTag: "বাজেট ও অফার",
+                pkgTitle: "আমার প্যাকেজসমূহ",
+                pkg1Tag: "প্রিমিয়াম প্যাকেজিং",
+                pkg1Heading: "প্যাকেজিং, লেবেল, পাউচ, বোতল এবং বক্স ডিজাইন",
+                pkg1Desc: "এমন একজন ডিজাইনার খুঁজছেন যিনি ইন্ডাস্ট্রিয়াল প্রিন্টের নির্ভুলতার সাথে প্রোডাক্ট প্যাকেজিং ও লেবেল ডিজাইন বোঝেন? আমি আপনার পণ্য, ব্র্যান্ড এবং প্রিন্টিংয়ের প্রয়োজন অনুযায়ী পেশাদার প্যাকেজিং ডিজাইন সরবরাহ করি।",
+                pkg1Li1: "প্যাকেজিং ও লেবেল ডিজাইন",
+                pkg1Li2: "বোতল ও জারের লেবেল",
+                pkg1Li3: "পাউচ ও বক্স ডিজাইন",
+                pkg1Li4: "প্রিন্ট-রেডি ফাইল ও ৩ডি মকআপ",
+                pkgBasicTitle: "Basic (বেসিক)",
+                pkgStandardTitle: "Standard (স্ট্যান্ডার্ড)",
+                pkgPremiumTitle: "Premium (প্রিমিয়াম)",
+                pkgBasicLi1: "৩ দিনের ডেলিভারি",
+                pkgBasicLi2: "২ বার রিভিশন",
+                pkgBasicLi3: "১টি অনন্য ডিজাইন কনসেপ্ট",
+                pkgBasicLi4: "থ্রিডি মকআপ ও সোর্স ফাইল",
+                pkgStdLi1: "৪ দিনের ডেলিভারি",
+                pkgStdLi2: "আনলিমিটেড রিভিশন",
+                pkgStdLi3: "১টি হাই-এন্ড আইটেম",
+                pkgStdLi4: "প্রিন্ট রেডি ও সোর্স ফাইল",
+                pkgStdLi5: "প্রিমিয়াম থ্রিডি মকআপ",
+                pkgPreLi1: "৭ দিনের ডেলিভারি",
+                pkgPreLi2: "আনলিমিটেড রিভিশন",
+                pkgPreLi3: "৩টি কমপ্লিট আইটেম বা ভেরিয়েশন",
+                pkgPreLi4: "অল সোর্স ফাইল (AI, EPS)",
+                pkgPreLi5: "মাল্টিপল ৩ডি মকআপ",
+                btnOrder: "অর্ডার করুন",
+                pkg2Tag: "অডিয়েন্স বুস্টার",
+                pkg2Heading: "সোশ্যাল মিডিয়া পোস্ট ও ক্যারোসেল ডিজাইন",
+                pkg2Desc: "আপনার সোশ্যাল মিডিয়াকে একটি উচ্চ রূপান্তরকারী ব্র্যান্ড সম্পদে পরিণত করুন। আমি এমন আকর্ষণীয় ভিজ্যুয়াল ডিজাইন করি যা শুধু দেখতেই সুন্দর নয়, বরং এনগেজমেন্ট, ক্লিক এবং বিক্রি বাড়াতে সাহায্য করে।",
+                pkg2Li1: "কাস্টম ইনস্টাগ্রাম ও ক্যারোসেল",
+                pkg2Li2: "ফেসবুক ও ইনস্টা অ্যাড ডিজাইন",
+                pkg2Li3: "ইন্সটাগ্রাম স্টোরি এবং রিল কভার",
+                pkg2Li4: "ই-কমার্স অ্যাড ক্রিয়েটিভস",
+                pkg2BasicTitle: "সোশ্যাল স্পার্ক স্টার্টার",
+                pkg2StdTitle: "সোশ্যাল বুস্ট প্রো",
+                pkg2PreTitle: "সোশ্যাল ডোমিনেশন প্যাক",
+                pkg2BasicLi1: "৩ দিনের ডেলিভারি",
+                pkg2BasicLi2: "অসীম রিভিশন",
+                pkg2BasicLi3: "১টি কাস্টম ইমেজ বিজ্ঞাপন",
+                pkg2BasicLi4: "সোর্স ফাইল অন্তর্ভুক্ত",
+                pkg2StdLi1: "৭ দিনের ডেলিভারি",
+                pkg2StdLi2: "অসীম রিভিশন",
+                pkg2StdLi3: "৬টি কাস্টম পোস্ট বা অ্যাড",
+                pkg2StdLi4: "সোর্স ফাইল অন্তর্ভুক্ত",
+                pkg2StdLi5: "ব্র্যান্ড-থিম ম্যাচ ডিজাইন",
+                pkg2PreLi1: "১৪ দিনের ডেলিভারি",
+                pkg2PreLi2: "অসীম রিভিশন",
+                pkg2PreLi3: "১২টি কাস্টম পোস্ট বা অ্যাড",
+                pkg2PreLi4: "অল সোর্স ফাইল (PSD/Ai)",
+                pkg2PreLi5: "হাই-কোয়ালিটি টেমপ্লেট",
+                portTag: "পোর্টফোলিও",
+                portTitle: "আমার অসাধারণ কাজসমূহ",
+                filterAll: "সব কাজ",
+                filterPack: "প্যাকেজিং",
+                filterLabel: "লেবেল ডিজাইন",
+                filterBrand: "ব্র্যান্ডিং",
+                contactTitle: "যোগাযোগ করুন",
+                contactFormTitle: "একটি বার্তা পাঠান",
+                contactFormDesc: "আপনার যেকোনো প্রোজেক্ট, প্রোডাক্ট লঞ্চিং বা লেবেল ডিজাইনের প্রয়োজনে নিচে বিস্তারিত লিখে মেসেজ পাঠান। খুব দ্রুত রিপ্লাই দেওয়া হবে।",
+                labelName: "আপনার নাম",
+                placeholderName: "সম্পূর্ণ নাম",
+                labelEmail: "আপনার ইমেইল",
+                placeholderEmail: "ইমেল অ্যাড্রেস",
+                labelMsg: "মেসেজ",
+                placeholderMsg: "আপনার প্রোজেক্ট ও আইডিয়ার বর্ণনা...",
+                btnSend: "বার্তা পাঠান",
+                contactLocTitle: "কর্মক্ষেত্র ও অবস্থান",
+                contactAddress: "রংপুর, সাতমাথা, বাংলাদেশ",
+                footerDesc: "৬ বছরের দীর্ঘ অভিজ্ঞতা সম্পন্ন প্যাকেজিং, লেবেল এবং সোশ্যাল মিডিয়া ডিজাইন সリューション। আপনার বিশ্বস্ত ডিজাইন পার্টনার।",
+                footerLicense: "ব্যবসায়িক লাইসেন্স তথ্য",
+                footerTrade: "ট্রেড লাইসেন্স :",
+                footerQuickLinks: "গুরুত্বপূর্ণ লিংক",
+                footerContactTitle: "যোগাযোগের তথ্যাদি",
+                footerPhoneCust: "কাস্টমার সার্ভিসেস ফোন",
+                footerPhoneMgr: "ম্যানেজার এর ফোন",
+                footerOffice: "অফিস ঠিকানা",
+                footerOfficeVal: "সাতমাথা, রংপুর, বাংলাদেশ",
+                footerCopyright: "© ২০২৬ Adomi Hasan. সর্বস্বত্ব সংরক্ষিত।",
+                whatsappNotify: "আসসালামু আলাইকুম স্যার, কীভাবে সহযোগিতা করতে পারি?",
+                whatsappChatBtn: "চ্যাট শুরু করুন"
+            },
+            en: {
+                experienceTag: "6+ Years of Experienced Designer",
+                heroGg: "I am",
+                heroSub: "Packaging & Label Design Expert",
+                btnContact: "Contact Me",
+                btnPortfolio: "View Portfolio",
+                navHome: "Home",
+                navAbout: "About",
+                navSkills: "Skills",
+                navServices: "Services",
+                navPackages: "Packages",
+                navPortfolio: "Portfolio",
+                navContact: "Contact",
+                aboutTag: "About Me",
+                aboutTitle: "The Creator of Brand Visual Stories",
+                aboutDesc: "I am a professional graphic designer with over 6 years of industry experience. I specialize in product packaging design, modern label layouts, and social media content management. Besides my client work, I am passionate about training and mentoring the next generation of designers.",
+                statExp: "6+ Years",
+                statExpSub: "Professional Experience",
+                statProj: "500+",
+                statProjSub: "Successful Projects",
+                skillsTag: "Skills & Expertise",
+                skillsTitle: "My Skill Metrics",
+                skillsDesc: "The core tools and skillsets combined with advanced design sense to elevate your brand.",
+                skill1: "Packaging & Label Design",
+                skill2: "Social Media Design",
+                skill3: "Adobe Illustrator",
+                skill4: "Adobe Photoshop",
+                skill5: "3D Mockup Design",
+                skill6: "Graphic Design Trainer",
+                servicesTag: "Professional Services",
+                servicesTitle: "What I Offer",
+                serv1Title: "Packaging & Label Design",
+                serv1Desc: "Perfect, print-ready packaging and label designs to skyrocket your product's brand value.",
+                serv2Title: "Social Media Design",
+                serv2Desc: "Engaging and professional posts tailored for social media to keep your audience hooked.",
+                serv3Title: "YouTube Thumbnail Design",
+                serv3Desc: "High-converting, professional thumbnails to boost your video's Click-Through Rate (CTR).",
+                pkgTag: "Budget & Offers",
+                pkgTitle: "My Packages",
+                pkg1Tag: "Premium Packaging",
+                pkg1Heading: "Packaging, Label, Pouch, Bottle & Box Design",
+                pkg1Desc: "Looking for a designer who understands product packaging with industrial print precision? I deliver professional packaging designs tailored to your brand, product, and printing needs.",
+                pkg1Li1: "Packaging & Label Design",
+                pkg1Li2: "Bottle & Jar Labels",
+                pkg1Li3: "Pouch & Box Design",
+                pkg1Li4: "Print-Ready Files & 3D Mockups",
+                pkgBasicTitle: "Basic Pouch/Label",
+                pkgStandardTitle: "Standard Premium",
+                pkgPremiumTitle: "Ultimate VIP",
+                pkgBasicLi1: "3 Days Delivery",
+                pkgBasicLi2: "2 Revisions",
+                pkgBasicLi3: "1 Unique Design Concept",
+                pkgBasicLi4: "3D Mockup & Source Files",
+                pkgStdLi1: "4 Days Delivery",
+                pkgStdLi2: "Unlimited Revisions",
+                pkgStdLi3: "1 High-End Item",
+                pkgStdLi4: "Print-Ready & Source Files",
+                pkgStdLi5: "Premium 3D Mockup Included",
+                pkgPreLi1: "7 Days Delivery",
+                pkgPreLi2: "Unlimited Revisions",
+                pkgPreLi3: "3 Complete Items or Variations",
+                pkgPreLi4: "All Source Files (AI, EPS)",
+                pkgPreLi5: "Multiple 3D Mockups",
+                btnOrder: "Order Now",
+                pkg2Tag: "Audience Booster",
+                pkg2Heading: "Social Media Posts & Carousel Design",
+                pkg2Desc: "Transform your social media channels into high-converting brand assets. I design stunning visuals that drive engagement, clicks, and sales.",
+                pkg2Li1: "Custom Instagram & Carousels",
+                pkg2Li2: "Facebook & Insta Ads Design",
+                pkg2Li3: "Instagram Stories & Reel Covers",
+                pkg2Li4: "E-commerce Ad Creatives",
+                pkg2BasicTitle: "Social Spark Starter",
+                pkg2StdTitle: "Social Boost Pro",
+                pkg2PreTitle: "Social Domination Pack",
+                pkg2BasicLi1: "3 Days Delivery",
+                pkg2BasicLi2: "Unlimited Revisions",
+                pkg2BasicLi3: "1 Custom Image Ad",
+                pkg2BasicLi4: "Source File Included",
+                pkg2StdLi1: "7 Days Delivery",
+                pkg2StdLi2: "Unlimited Revisions",
+                pkg2StdLi3: "6 Custom Posts or Ads",
+                pkg2StdLi4: "Source File Included",
+                pkg2StdLi5: "Brand-Theme Match Design",
+                pkg2PreLi1: "14 Days Delivery",
+                pkg2PreLi2: "Unlimited Revisions",
+                pkg2PreLi3: "12 Custom Posts or Ads",
+                pkg2PreLi4: "All Source Files (PSD/Ai)",
+                pkg2PreLi5: "High-Quality Templates",
+                portTag: "Portfolio",
+                portTitle: "My Exceptional Creations",
+                filterAll: "All Works",
+                filterPack: "Packaging",
+                filterLabel: "Label Design",
+                filterBrand: "Branding",
+                contactTitle: "Contact Me",
+                contactFormTitle: "Send a Message",
+                contactFormDesc: "Whether it is for a new project, product launch, or design consultation, drop your message below. I reply extremely fast.",
+                labelName: "Your Name",
+                placeholderName: "Full Name",
+                labelEmail: "Your Email",
+                placeholderEmail: "Email Address",
+                labelMsg: "Message",
+                placeholderMsg: "Describe your project or design idea...",
+                btnSend: "Send Message",
+                contactLocTitle: "Workspace & Location",
+                contactAddress: "Satmatha, Rangpur, Bangladesh",
+                footerDesc: "Providing top-notch packaging, label, and social media design solutions with 6+ years of verified industry expertise.",
+                footerLicense: "Business License Info",
+                footerTrade: "Trade License:",
+                footerQuickLinks: "Quick Links",
+                footerContactTitle: "Contact Info",
+                footerPhoneCust: "Customer Services Phone",
+                footerPhoneMgr: "Manager Phone",
+                footerOffice: "Office Address",
+                footerOfficeVal: "Satmatha, Rangpur, Bangladesh",
+                footerCopyright: "© 2026 Adomi Hasan. All Rights Reserved.",
+                whatsappNotify: "Assalamu Alaikum Sir, how can I assist you today?",
+                whatsappChatBtn: "Start Chat"
+            }
+        };
+
+        let currentLanguage = 'bn';
+        let currentFilter = 'all';
+
+        // Portfolio Dataset
+        const projects = [
+            { 
+                title_bn: "প্রিমিয়াম পাউচ প্যাকেজিং", 
+                title_en: "Premium Pouch Packaging", 
+                category: "packaging",
+                tag_bn: "প্যাকেজিং",
+                tag_en: "Packaging",
+                img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwtXCgsex3RBOMI4Oj-XaKBTn-PTqDmGkHNmX1bRtGt1D0aFrfKqI71pPmr4geCf1KhVsMKrzlDWS6Mveh28Hieo3r5rAE7NO63677pVWBl2W7yTJsB88dAZ9BB9VZ_M8pxsmIomARgZiIk-heaDfRWV9ofODyRVI8hscW8QgX9UH7X-gJlXHe7yM2wg/s320/Temitap.jpg" 
+            },
+            { 
+                title_bn: "সাপ্লিমেন্ট বক্স ডিজাইন", 
+                title_en: "Supplement Box Design", 
+                category: "packaging",
+                tag_bn: "প্যাকেজিং",
+                tag_en: "Packaging",
+                img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirzOxMMJvzJCs_NapO6Y38WYN38JpkXvaiMgoVvZyrm-h3jET8lN2NRLkZTMIfXJdSdU4kbx4aaeTSOJ_2wG-6GgBzd_D5x2kMGGk0-5vw-ITofoDV4TgG6MOwTwUZ_uC1jAfP_tROZfyYbz9q-bAumz0NV0M9Ay0yBnmKgbb9ApAu6pU5PCv1k3gKYw/s320/Methozeb.jpg" 
+            },
+            { 
+                title_bn: "মেডিকেল প্রোডাক্ট লেবেল", 
+                title_en: "Medical Product Label", 
+                category: "label",
+                tag_bn: "লেবেল ডিজাইন",
+                tag_en: "Label Design",
+                img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7LDEjK2ZOC5VTgQJUre6KD7oiBKBJLTXHGD_d3wMXIflv9O_v0kLlwXqi77HoKAplm0axOYqGu3suASoRiSAxBbSLCtDCGC2QYHpQKszDkqQQZweVgn9TUeb_kMlpAJ7F-LtTSQ2Hw7Ls6yzNsFE4-Y2QzOI379biOq5rIZEjYTOlHrT9AUfIGELAFQ/s320/Methozeb%20Packaging%20design.jpg" 
+            },
+            { 
+                title_bn: "কর্পোরেট আইডেন্টিটি লেআউট", 
+                title_en: "Corporate Identity Layout", 
+                category: "branding",
+                tag_bn: "ব্র্যান্ডিং",
+                tag_en: "Branding",
+                img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDw5iUt6-q9Mh6RP0_x-aHunr_-ICTNsGxMrKs_2nPMCCSgUMdObLMDhztPrfMaqb5uF0lX5C1XY7Cye_WzCFX-CRTCcWJEMNA5R2TrnhSQite9fSj0b7Y2b38j739iTd1LnzwXzNiDJdPu5zlSpaCBuvBD7uFOfXIozPEjtOU-BfJkFX2KNn_5CujuA/s320/00b0f3214146505.6752d83298116.jpg" 
+            }
+        ];
+    </script>
+
+    <!-- Controller Logic Script -->
+    <script>
+        async function detectLanguagePreference() {
+            let storedLang = localStorage.getItem('preferredLanguage');
+            if (storedLang) {
+                changeLanguage(storedLang);
+                return;
+            }
+
+            try {
+                const geoResponse = await fetch('https://ipapi.co/json/');
+                const geoData = await geoResponse.json();
+                if (geoData && geoData.country_code === 'BD') {
+                    changeLanguage('bn');
+                    return;
+                }
+            } catch (err) {
+                console.log("Geo IP lookup failed, falling back to browser preference.");
+            }
+
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang && browserLang.toLowerCase().includes('bn')) {
+                changeLanguage('bn');
+            } else {
+                changeLanguage('en');
+            }
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('preferredLanguage', lang);
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.getElementById('nameInput').placeholder = translations[lang].placeholderName || "Full Name";
+            document.getElementById('emailInput').placeholder = translations[lang].placeholderEmail || "Email Address";
+            document.getElementById('messageInput').placeholder = translations[lang].placeholderMsg || "Message";
+
+            renderProjects(currentFilter, lang);
+
+            const activeBtnClass = "bg-blue-600 text-white shadow-md shadow-blue-500/20";
+            const inactiveBtnClass = "text-gray-300 hover:text-white hover:bg-white/5";
+
+            document.getElementById('langBtnBN-desktop').className = `px-3 py-1 rounded-full text-xs transition font-semibold ${lang === 'bn' ? activeBtnClass : inactiveBtnClass}`;
+            document.getElementById('langBtnEN-desktop').className = `px-3 py-1 rounded-full text-xs transition font-semibold ${lang === 'en' ? activeBtnClass : inactiveBtnClass}`;
+
+            document.getElementById('langBtnBN-mobile').className = `px-3 py-1 rounded-full text-xs transition font-semibold ${lang === 'bn' ? activeBtnClass : inactiveBtnClass}`;
+            document.getElementById('langBtnEN-mobile').className = `px-3 py-1 rounded-full text-xs transition font-semibold ${lang === 'en' ? activeBtnClass : inactiveBtnClass}`;
+        }
+
+        function renderProjects(filter = "all", lang = "bn") {
+            const grid = document.getElementById('projectGrid');
+            grid.innerHTML = ""; 
+            
+            const filteredProjects = filter === "all" ? projects : projects.filter(p => p.category === filter);
+            
+            filteredProjects.forEach((p, idx) => {
+                const title = lang === 'bn' ? p.title_bn : p.title_en;
+                const tag = lang === 'bn' ? p.tag_bn : p.tag_en;
+                // Perfect Aspect [3/4] cards with blurry visual depth (resolves image_573728.png cropping problem)
+                grid.innerHTML += `
+                    <div class="glass rounded-2xl overflow-hidden group border border-white/5 shadow-md relative reveal active flex flex-col justify-between" style="transition-delay: ${idx * 100}ms">
+                        <div class="overflow-hidden aspect-[3/4] relative bg-slate-950 flex items-center justify-center p-4">
+                            <div class="absolute inset-0 bg-cover bg-center filter blur-xl opacity-25 scale-110 pointer-events-none" style="background-image: url('${p.img}')"></div>
+                            
+                            <img src="${p.img}" alt="${title}" class="relative z-10 max-h-full max-w-full object-contain rounded-lg shadow-xl transform group-hover:scale-[1.03] transition-transform duration-500">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 z-20">
+                                <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">${tag}</span>
+                            </div>
+                        </div>
+                        <div class="p-5 flex justify-between items-center bg-slate-950/20 border-t border-white/5">
+                            <h4 class="font-bold text-sm md:text-base text-white group-hover:text-blue-400 transition-colors duration-300">${title}</h4>
+                            <span class="text-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function closeWhatsappBubble(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            const bubble = document.getElementById('whatsappBubble');
+            if (bubble) {
+                bubble.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                bubble.classList.add('translate-y-4', 'opacity-0', 'pointer-events-none');
+                sessionStorage.setItem('waDismissed', 'true');
+            }
+        }
+
+        window.onload = function() {
+            detectLanguagePreference();
+            
+            setTimeout(() => {
+                const bubble = document.getElementById('whatsappBubble');
+                if (bubble && !sessionStorage.getItem('waDismissed')) {
+                    bubble.classList.remove('translate-y-4', 'opacity-0', 'pointer-events-none');
+                    bubble.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                }
+            }, 3000);
+        };
+
+        // Filters Action
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white', 'active');
+                    btn.classList.add('glass', 'text-gray-300');
+                });
+                
+                button.classList.add('bg-blue-600', 'text-white', 'active');
+                button.classList.remove('glass', 'text-gray-300');
+                
+                currentFilter = button.getAttribute('data-filter');
+                renderProjects(currentFilter, currentLanguage);
+            });
+        });
+
+        // Mobile Nav Trigger
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                menuIcon.className = "fas fa-times text-2xl transition-transform duration-300";
+            } else {
+                menuIcon.className = "fas fa-bars text-2xl transition-transform duration-300";
+            }
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = "fas fa-bars text-2xl";
+            });
+        });
+
+        // Scroll animations
+        const reveals = document.querySelectorAll('.reveal');
+        
+        function scrollReveal() {
+            reveals.forEach(r => {
+                const windowHeight = window.innerHeight;
+                const elementTop = r.getBoundingClientRect().top;
+                const revealPoint = 100;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    r.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', scrollReveal);
+        window.addEventListener('load', scrollReveal);
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl', 'bg-[#0b0f19e6]');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-3');
+            } else {
+                navbar.classList.remove('shadow-xl', 'bg-[#0b0f19e6]');
+                navbar.classList.remove('py-3');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Contact submission feedback handler (No alert triggers)
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = contactForm.querySelector('button');
+            
+            const sendingText = currentLanguage === 'bn' ? '<i class="fas fa-spinner animate-spin"></i> পাঠানো হচ্ছে...' : '<i class="fas fa-spinner animate-spin"></i> Sending...';
+            const successText = currentLanguage === 'bn' ? '<i class="fas fa-check"></i> ধন্যবাদ! আপনার বার্তা পৌঁছেছে।' : '<i class="fas fa-check"></i> Thanks! Message Sent Successfully.';
+            
+            button.innerHTML = sendingText;
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerHTML = successText;
+                button.className = "w-full bg-green-600 text-white py-4 rounded-xl font-bold transition duration-300 flex items-center justify-center gap-2";
+                contactForm.reset();
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
